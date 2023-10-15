@@ -5,34 +5,34 @@
    let {name} = perro;
 console.log(perro.name);
 /* ejemplo links */
- export const links = [
-    {
-      name:"navbar-nav ms-auto mb-2 mb-lg-0",
-      links:[
-        {
-           title: "home",
-           icon:"",
-           href:"/home"
-          
-        },
-        {
+export const links = [
+   {
+      name: "navbar-nav ms-auto mb-2 mb-lg-0",
+      links: [
+         {
+            title: "home",
+            icon: "",
+            href: "/home"
+
+         },
+         {
             title: "Productos",
-            icon:"",
-            href:"/products"
+            icon: "",
+            href: "/products"
          },
          {
             title: "Contacto",
-            icon:"",
-            href:"/contac"
+            icon: "",
+            href: "/contac"
          },
          {
             title: "Registro",
-            icon:"",
-            href:"/register"
+            icon: "",
+            href: "/register"
          },
-       
-       
+
+
       ]
-    },
-    
-  ]
+   },
+
+]

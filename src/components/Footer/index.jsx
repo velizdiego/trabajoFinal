@@ -18,11 +18,9 @@ const Footer = () => {
                 <Articleb
                   icon="bi bi-gift-fill"
                 />
-                 <Articlec
+                <Articlec
                   icon="bi bi-person-circle"
                 />
-
-               
                 <div className="b-example-divider" />
               </div>
             </div>

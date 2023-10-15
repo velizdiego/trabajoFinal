@@ -27,14 +27,11 @@ const Result = () => {
         <>
        
         
-        <div className="main-result">
-                  
-       
-                    
-    <div className="container products-wrapper">
+       <div className="container mt-5">
         <div className="row">
-            <div className=" col-sm-4 col-md-4 col-lg-4">
-                <div className="product-container">
+          
+            <div className="col-md-6">
+               
                     
                     <Productslist
         title={`resultado de la busqueda de: ${word}`}
@@ -46,9 +43,9 @@ const Result = () => {
 
         </div>
 
-    </div>
+    
 
-</div>
+
 
 </>
      );

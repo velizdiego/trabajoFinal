@@ -1,4 +1,7 @@
+import { Link } from "react-router-dom";
+
 const Article = (props) => {
+
     return (
         <><div className="feature col">
             <i className={props.icon} />
@@ -10,14 +13,14 @@ const Article = (props) => {
                     sitio seguro para tus compras
                 </p>
             </article>
-            <a href="#" className="icon-link">
-          Call to action
-          <svg className="bi">
-            <use xlinkHref="#chevron-right" />
-          </svg>
-        </a>
-           
-            </div></>
+            <Link to="/" className="icon-link">
+                Call to action
+                <svg className="bi">
+                    <use xlinkHref="#chevron-right" />
+                </svg>
+            </Link>
+
+        </div></>
     );
 
 }

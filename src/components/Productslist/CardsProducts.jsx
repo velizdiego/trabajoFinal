@@ -1,49 +1,34 @@
-import { useRef } from "react";
 import { Link } from "react-router-dom";
 
+const CardsProducts = ({ product }) => {
 
-const CardsProducts = ({product, cart , setCart}) => {
-    const button = useRef();
     const imageUrl = `http://127.0.0.1:3003/images/${product.images}`
-                        
-    const addToCart =() => {
-        console.log(button.current._id);
-        console.log("estamos agregando al carrito");
-        const carNew = [
-            ...cart,
-            button.current.id
-        ]
-        setCart(carNew)
-            
-    }
-    return (   
-        
-          <div className="col-12 col-sm-6 col-lg-3">
-            < section className="product-box">
-            
-            <div className="card-body"/>
-            <Link to={`/detail/${product._id}`}>
-                <figure className="product-box_image">
-                <img
-                 src={imageUrl}
-                 
-                  className="product-image"
-                   alt="IMAGEN DE PRODUCTO" /> 
-                </figure>
-                <article className="product-box-data">
-                    <h2>{product.price}</h2>
-                    <span>{product.discount}</span>
-                    <p>{product.name}</p>
-                    <i className="fas fa-truck"></i>
-                </article>
+    return (
+        <>
+            <div className="product-container">
+                <Link to={`/detail/${product._id}`}>
+                    <div className="card-body">
+                        <h5 className="card-detail-title">Nombre del Producto:{product.name}</h5>
+                        <img src={imageUrl} className="card-img" alt="" />
+                        <h6 className="product-detail">Precio:{product.price}</h6>
+                        <p className="product-detail-description">Descripcion:{product.description}</p>
+                        <p className="product-detail-title">{product.name}</p>
+                        <p className="product-detail-price small">
+                            <span>${product.price}</span>/<b>Descuento:{product.discount}%off</b>
+                        </p>
+                        <p className="product-detail-brand">Marca:{product.brand}</p>
+                    </div>
+
                 </Link>
-                <button id={product.id} onClick={addToCart}>add to cart</button>
-                </section>
-                </div>
-            
-                
-            
+            </div></>
+
     );
 }
+export default CardsProducts;
 
-            export default CardsProducts;
+
+
+
+
+
+

@@ -1,13 +1,13 @@
-const Link = ({link}) => {
-    return ( 
+const Link = ({ link }) => {
+    return (
         <li>
-             <a href={link.href}>
+            <a href={link.href}>
                 {link.title}
-                
-                {link.icon ?<i classname ={link.icon}/>:  null  }       
+
+                {link.icon ? <i classname={link.icon} /> : null}
             </a>
-          </li>
-     );
+        </li>
+    );
 };
- 
+
 export default Link;
